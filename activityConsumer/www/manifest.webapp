@@ -1,0 +1,35 @@
+{
+  "version": "0.1",
+  "name": "Activity consumer",
+  "description": "This can consume myapp.activity.",
+  "launch_path": "/index.html",
+  "icons": {
+    "48": "/img/icon-30.png",
+    "48": "/img/icon-60.png"
+  },
+  "installs_allowed_from" : ["https://marketplace.example.com"],
+  "developer": {
+    "name": "Gergő István Nagy"
+  },
+  "activities": {
+    "myapp.activity": {
+      "href": "./index.html",
+      "disposition": "inline",
+      "filters": {
+        "type": ["text/msg"]
+      },
+      "returnValue": true
+    }
+  },
+  "appcache_path": "/cache.manifest",
+  "locales": {
+    "hu": {
+      "description": "Az alkalmazás képes myapp.activity kezelésére.",
+      "developer": {
+        "name": "Nagy Gergő István"
+      }
+    }
+  },
+  "default_locale": "en",
+  "orientation" : ["portrait"]
+}
