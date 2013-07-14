@@ -9,7 +9,7 @@ define(function (require) {
         var /*MozActivityOptions */ option = activityRequest.source;
 
         if (option.name === "myapp.activity") {
-            var messageFromProducer = option.data.msg;
+            var messageFromProducer = option.data.msg.text;
             consumed.innerHTML = messageFromProducer;
 
             if (messageFromProducer) {

@@ -9,6 +9,11 @@ define(function (require) {
 
 
     button.addEventListener("click", function () {
+        var msg = {
+            text: activityMessage.value,
+            length : activityMessage.value.length
+        }
+
         var activity = new MozActivity({
             // Ask for the "pick" activity
             name: "myapp.activity",
@@ -16,7 +21,7 @@ define(function (require) {
             // Provide de data required by the filters of the activity
             data: {
                 type: "text/msg",
-                msg: activityMessage.value
+                msg: msg
             }
         })
 
